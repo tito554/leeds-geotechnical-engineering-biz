@@ -1,0 +1,56 @@
+# Leeds
+
+> Geotechnical engineering company in United States, providing professional services in soil mechanics, foundation engineering and site investigation.
+
+## Services
+- [Active Passive Anchor Design](https://leeds.geotechnical-engineering.biz/active-passive-anchor-design/)
+- [Atterberg Limits](https://leeds.geotechnical-engineering.biz/atterberg-limits/)
+- [Base Isolation Seismic Design](https://leeds.geotechnical-engineering.biz/base-isolation-seismic-design/)
+- [Bearing Capacity Analysis](https://leeds.geotechnical-engineering.biz/bearing-capacity-analysis/)
+- [Cone Penetration](https://leeds.geotechnical-engineering.biz/cone-penetration/)
+- [Debris Flow Analysis](https://leeds.geotechnical-engineering.biz/debris-flow-analysis/)
+- [Deep Soil Mixing](https://leeds.geotechnical-engineering.biz/deep-soil-mixing/)
+- [Differential Settlement Analysis](https://leeds.geotechnical-engineering.biz/differential-settlement-analysis/)
+- [Direct Shear](https://leeds.geotechnical-engineering.biz/direct-shear/)
+- [Driven Pile Design](https://leeds.geotechnical-engineering.biz/driven-pile-design/)
+- [Field Density](https://leeds.geotechnical-engineering.biz/field-density/)
+- [Field Permeability](https://leeds.geotechnical-engineering.biz/field-permeability/)
+- [Foundations](https://leeds.geotechnical-engineering.biz/foundations/)
+- [Foundations Fill](https://leeds.geotechnical-engineering.biz/foundations-fill/)
+- [Geocell Design](https://leeds.geotechnical-engineering.biz/geocell-design/)
+- [Geophysics](https://leeds.geotechnical-engineering.biz/geophysics/)
+- [Geotechnical Instrumentation](https://leeds.geotechnical-engineering.biz/geotechnical-instrumentation/)
+- [Geotechnical Road Drainage](https://leeds.geotechnical-engineering.biz/geotechnical-road-drainage/)
+- [Geotextile Specification](https://leeds.geotechnical-engineering.biz/geotextile-specification/)
+- [Ground Improvement](https://leeds.geotechnical-engineering.biz/ground-improvement/)
+- [Ground Penetrating Radar](https://leeds.geotechnical-engineering.biz/ground-penetrating-radar/)
+- [Hvsr Microtremor Survey](https://leeds.geotechnical-engineering.biz/hvsr-microtremor-survey/)
+- [In Situ Testing](https://leeds.geotechnical-engineering.biz/in-situ-testing/)
+- [Investigation](https://leeds.geotechnical-engineering.biz/investigation/)
+- [Laboratory](https://leeds.geotechnical-engineering.biz/laboratory/)
+- [Laboratory Permeability](https://leeds.geotechnical-engineering.biz/laboratory-permeability/)
+- [Pile Skin Friction Vs](https://leeds.geotechnical-engineering.biz/pile-skin-friction-vs/)
+- [Prefabricated Vertical Drain](https://leeds.geotechnical-engineering.biz/prefabricated-vertical-drain/)
+- [Preloading Design](https://leeds.geotechnical-engineering.biz/preloading-design/)
+- [Raft Mat Foundation Design](https://leeds.geotechnical-engineering.biz/raft-mat-foundation-design/)
+- [Retaining Wall Design](https://leeds.geotechnical-engineering.biz/retaining-wall-design/)
+- [Rigid Pavement Design](https://leeds.geotechnical-engineering.biz/rigid-pavement-design/)
+- [Road Subgrade Design](https://leeds.geotechnical-engineering.biz/road-subgrade-design/)
+- [Roadway](https://leeds.geotechnical-engineering.biz/roadway/)
+- [Seismic](https://leeds.geotechnical-engineering.biz/seismic/)
+- [Shear Wave Velocity](https://leeds.geotechnical-engineering.biz/shear-wave-velocity/)
+- [Sheet Pile Wall Design](https://leeds.geotechnical-engineering.biz/sheet-pile-wall-design/)
+- [Slope Stability Analysis](https://leeds.geotechnical-engineering.biz/slope-stability-analysis/)
+- [Slopes Walls](https://leeds.geotechnical-engineering.biz/slopes-walls/)
+- [Soil Classification](https://leeds.geotechnical-engineering.biz/soil-classification/)
+- [Soil Erosion Analysis](https://leeds.geotechnical-engineering.biz/soil-erosion-analysis/)
+- [Soil Liquefaction Analysis](https://leeds.geotechnical-engineering.biz/soil-liquefaction-analysis/)
+- [Soil Mechanics Study](https://leeds.geotechnical-engineering.biz/soil-mechanics-study/)
+- [Standard Penetration](https://leeds.geotechnical-engineering.biz/standard-penetration/)
+
+## Contact
+- Website: https://leeds.geotechnical-engineering.biz/
+
+## About
+This page provides information about geotechnical engineering services available in United States.
+The company complies with local and international standards including ASTM, ISO and country-specific norms.
