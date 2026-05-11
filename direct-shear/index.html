@@ -26,6 +26,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .servicio h3 { margin: 0 0 .5rem; color: var(--dark); font-size: .95rem; }
 .sidebar .cat:hover { background: rgba(255,255,255,0.08); }
 tr:nth-child(even) { background: #f8fafc; }
@@ -38,7 +43,7 @@ th { background: var(--dark); color: white; font-weight: 600; font-family: var(-
     max-height: calc(100vh - 2rem); overflow-y: auto;
 }
 main { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.06); margin-bottom: 2rem; flex: 1; min-width: 0; }
-    .container { padding: 1rem; }
+    
 
 details { margin-bottom: .75rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
 .cta .contacto-line { font-size: 1rem; margin: .5rem 0; }
@@ -91,7 +96,7 @@ footer { text-align: center; padding: 2rem; font-size: .8rem; color: #94a3b8; ba
 
 .cta { background: var(--dark); color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: center; }
 .sidebar .sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }
-    main { padding: 1.5rem; }
+    
 .cat-sub-wrap a:hover{opacity:1;background:rgba(255,255,255,.05)}
 .cat-arrow{display:inline-block;transition:transform .2s ease;font-size:.85rem}
 .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
@@ -119,7 +124,7 @@ details p { padding: .75rem 1.25rem; font-size: .9rem; color: #475569; margin: 0
 .cat-row{display:flex;align-items:stretch;justify-content:space-between;background:transparent;transition:background .15s;border-bottom:1px solid rgba(255,255,255,.05)}
 
 header { background: var(--dark); color: white; padding: 1.5rem 0 2rem; }
-    .content-area { flex-direction: column; }
+    
 
 .normas { background: rgba(0,0,0,0.03); padding: 1rem 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary); margin: 1.5rem 0; font-size: .9rem; }
 th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -133,10 +138,12 @@ th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f
 summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 * { margin:0; padding:0; box-sizing:border-box; }
 .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; gap: 1rem; flex-wrap: wrap; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 main p { margin-bottom: 1rem; color: #334155; }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-.sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }</style>
+.sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }
+
+</style>
 <style>
 @media(min-width:901px){
   .content-area{display:flex!important;gap:1.5rem!important;align-items:flex-start!important}
@@ -148,7 +155,9 @@ img{max-width:100%!important;height:auto!important}
   .navbar .nav{display:flex!important;flex-wrap:nowrap!important;gap:1.2rem!important;align-items:center!important;overflow:visible!important;justify-content:space-between!important}
   body{background:#FAFAFA!important;color:#18181B!important}
   aside{align-self:start!important}
-  .sidebar nav,.sidebar .nav{display:block!important}</style></head>
+  .sidebar nav,.sidebar .nav{display:block!important}
+}
+</style></head>
 <body>
 
 <header>
@@ -192,6 +201,8 @@ img{max-width:100%!important;height:auto!important}
 
             <section>
                 <h2>Critical ground factors in Leeds</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>Leeds lies about 70 km east of the Pennine fault system, and while major seismicity is rare, the glacial till can undergo significant strain softening under sustained loading. In filled ground along the River Aire, old alluvium may contain organic layers that reduce effective friction angles to below 25 degrees. A poorly characterised shear strength can lead to progressive slope failures or excessive settlement of spread footings. Running the direct shear test on representative samples from each stratum gives us the data to apply the correct partial factors from Eurocode 7 and avoid under-designed foundations.</p>
             </section>
 
@@ -216,6 +227,8 @@ img{max-width:100%!important;height:auto!important}
 
             <section>
                 <h2>FAQ</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <details><summary>What is the difference between a direct shear test and a triaxial test?</summary><p>The direct shear test forces failure along a predetermined horizontal plane and is best suited for drained strength parameters on granular soils and stiff clays. The triaxial test allows failure on the weakest plane and can measure undrained shear strength. For Leeds glacial tills we often run both depending on the drainage conditions expected in the field.</p></details><details><summary>How long does a direct shear test take in your Leeds lab?</summary><p>A standard three-stage test on sand or gravel takes 2–3 working days. For clay specimens requiring very slow displacement rates (e.g. 0.002 mm/min) the same test can take 5–7 days. We always agree a schedule with the client before starting.</p></details><details><summary>What sample quality is required for a direct shear test?</summary><p>We accept undisturbed block samples, U100 tube samples and remoulded compacted specimens. The sample must be representative of the stratum and stored in sealed bags to maintain moisture content. Disturbed samples are only suitable for remoulded testing of fill materials.</p></details><details><summary>Can you test soils with gravel or cobbles in the direct shear box?</summary><p>We can test soils with particles up to 20 mm using our 100 mm square shear box. Larger particles must be removed and the test performed on the finer fraction, with the result noted as representative of the matrix only. For coarse granular materials we recommend a large direct shear apparatus on site.</p></details><details><summary>What is the typical cost of a direct shear test in Leeds?</summary><p>A standard three-stage direct shear test with full reporting ranges between £540 and £610. Multi-stage tests or tests on geosynthetic interfaces may add £90–£140 per specimen. We provide a fixed price quotation after reviewing the sample type and number of specimens.</p></details>
             </section>
 

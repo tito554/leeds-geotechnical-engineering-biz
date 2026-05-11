@@ -23,6 +23,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .servicio h3 { margin: 0 0 .5rem; color: var(--dark); font-size: .95rem; }
 .sidebar .cat:hover { background: rgba(255,255,255,0.08); }
 tr:nth-child(even) { background: #f8fafc; }
@@ -35,7 +40,7 @@ th { background: var(--dark); color: white; font-weight: 600; font-family: var(-
     max-height: calc(100vh - 2rem); overflow-y: auto;
 }
 main { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.06); margin-bottom: 2rem; flex: 1; min-width: 0; }
-    .container { padding: 1rem; }
+    
 
 details { margin-bottom: .75rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
 .cta .contacto-line { font-size: 1rem; margin: .5rem 0; }
@@ -88,7 +93,7 @@ footer { text-align: center; padding: 2rem; font-size: .8rem; color: #94a3b8; ba
 
 .cta { background: var(--dark); color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: center; }
 .sidebar .sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }
-    main { padding: 1.5rem; }
+    
 .cat-sub-wrap a:hover{opacity:1;background:rgba(255,255,255,.05)}
 .cat-arrow{display:inline-block;transition:transform .2s ease;font-size:.85rem}
 .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
@@ -116,7 +121,7 @@ details p { padding: .75rem 1.25rem; font-size: .9rem; color: #475569; margin: 0
 .cat-row{display:flex;align-items:stretch;justify-content:space-between;background:transparent;transition:background .15s;border-bottom:1px solid rgba(255,255,255,.05)}
 
 header { background: var(--dark); color: white; padding: 1.5rem 0 2rem; }
-    .content-area { flex-direction: column; }
+    
 
 .normas { background: rgba(0,0,0,0.03); padding: 1rem 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary); margin: 1.5rem 0; font-size: .9rem; }
 th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -130,10 +135,12 @@ th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f
 summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 * { margin:0; padding:0; box-sizing:border-box; }
 .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; gap: 1rem; flex-wrap: wrap; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 main p { margin-bottom: 1rem; color: #334155; }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-.sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }</style>
+.sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }
+
+</style>
 <style>
 @media(min-width:901px){
   .content-area{display:flex!important;gap:1.5rem!important;align-items:flex-start!important}
@@ -145,7 +152,9 @@ img{max-width:100%!important;height:auto!important}
   .navbar .nav{display:flex!important;flex-wrap:nowrap!important;gap:1.2rem!important;align-items:center!important;overflow:visible!important;justify-content:space-between!important}
   body{background:#FAFAFA!important;color:#18181B!important}
   aside{align-self:start!important}
-  .sidebar nav,.sidebar .nav{display:block!important}</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"description":"Leeds sits on a varied geology of Carboniferous Coal Measures, Millstone Grit, and glacial till, making laboratory testing essential for reliable ground ch","name":"Laboratory in Leeds – UK","isPartOf":{"@id":"https://leeds.geotechnical-engineering.biz/#website-efab","@type":"WebSite","url":"https://leeds.geotechnical-engineering.biz"},"@type":"WebPage","inLanguage":"en","@id":"https://leeds.geotechnical-engineering.biz/laboratory/","url":"https://leeds.geotechnical-engineering.biz/laboratory/"},{"@type":"BreadcrumbList","itemListElement":[{"position":1,"item":"https://leeds.geotechnical-engineering.biz/","name":"Home","@type":"ListItem"},{"position":2,"item":"https://leeds.geotechnical-engineering.biz/laboratory/","name":"Laboratory","@type":"ListItem"}]},{"name":"Laboratory","@type":"ItemList","itemListElement":[{"position":1,"name":"Atterberg limits","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/atterberg-limits/"},{"position":2,"name":"Direct shear test","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/direct-shear/"},{"position":3,"name":"Laboratory permeability test (falling/constant head)","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/laboratory-permeability/"},{"position":4,"name":"Soil classification (USCS/AASHTO)","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/soil-classification/"},{"position":5,"name":"Soil mechanics study","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/soil-mechanics-study/"}]}]}</script></head>
+  .sidebar nav,.sidebar .nav{display:block!important}
+}
+</style><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"description":"Leeds sits on a varied geology of Carboniferous Coal Measures, Millstone Grit, and glacial till, making laboratory testing essential for reliable ground ch","name":"Laboratory in Leeds – UK","isPartOf":{"@id":"https://leeds.geotechnical-engineering.biz/#website-efab","@type":"WebSite","url":"https://leeds.geotechnical-engineering.biz"},"@type":"WebPage","inLanguage":"en","@id":"https://leeds.geotechnical-engineering.biz/laboratory/","url":"https://leeds.geotechnical-engineering.biz/laboratory/"},{"@type":"BreadcrumbList","itemListElement":[{"position":1,"item":"https://leeds.geotechnical-engineering.biz/","name":"Home","@type":"ListItem"},{"position":2,"item":"https://leeds.geotechnical-engineering.biz/laboratory/","name":"Laboratory","@type":"ListItem"}]},{"name":"Laboratory","@type":"ItemList","itemListElement":[{"position":1,"name":"Atterberg limits","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/atterberg-limits/"},{"position":2,"name":"Direct shear test","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/direct-shear/"},{"position":3,"name":"Laboratory permeability test (falling/constant head)","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/laboratory-permeability/"},{"position":4,"name":"Soil classification (USCS/AASHTO)","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/soil-classification/"},{"position":5,"name":"Soil mechanics study","@type":"ListItem","url":"https://leeds.geotechnical-engineering.biz/soil-mechanics-study/"}]}]}</script></head>
 <body>
 
 <header>
@@ -208,6 +217,8 @@ img{max-width:100%!important;height:auto!important}
 
             <section>
                 <h2>Our services</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>We offer three anchor design services tailored to Leeds ground conditions. Each follows UKAS-accredited procedures under ISO 9001:2015.</p>
                 <style>.servicios-grid a.servicio-link:hover{border-color:#CA8A04;box-shadow:0 4px 14px rgba(0,0,0,.08);transform:translateY(-2px)}.servicios-grid{display:flex;flex-wrap:wrap;gap:1rem;justify-content:flex-start}.servicios-grid .servicio{flex:0 0 calc(50% - .5rem);min-width:260px;padding:1rem 1.2rem;border:1px solid #E5E7EB;border-radius:10px;background:#FFFFFF;position:relative;transition:border-color .18s,box-shadow .18s,transform .18s}.servicios-grid a.servicio-link:hover h3{color:#CA8A04}.servicios-grid a.servicio-link:hover .servicio-arrow{transform:translateX(4px);opacity:1}.servicios-grid a.servicio-link{display:block;text-decoration:none;color:inherit;cursor:pointer}.servicio-arrow{position:absolute;right:1rem;bottom:.8rem;color:#CA8A04;font-weight:700;opacity:.55;transition:transform .18s,opacity .18s}</style><div class="servicios-grid"><div class="servicio"><h3>Active anchor design (pre-stressed)</h3><p>Locked-off tendons for basements and retaining walls. We calculate lock-off loads using bond zone capacity in Coal Measures strata. Creep testing carried out on 10% of anchors to BS 8081.</p></div><div class="servicio"><h3>Passive anchor design (deadman anchors)</h3><p>Unstressed systems for temporary support where ground movement is tolerable. Designed for 100–150 mm displacement. Ideal for slope stabilisation in the Aire valley alluvium.</p></div><div class="servicio"><h3>Anchor testing and verification</h3><p>Proof testing to 1.25 x working load and creep testing over 24 hours. We issue a test certificate with load–displacement curves. Used by Leeds City Council for permanent works approval.</p></div></div>
             </section>

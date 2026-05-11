@@ -26,6 +26,11 @@
 
 @media (max-width: 900px) {
     .sidebar { display: none; }
+    .content-area { flex-direction: column; }
+    .container { padding: 1rem; }
+    .header-top { flex-direction: column; text-align: center; }
+    main { padding: 1.5rem; }
+}
 .servicio h3 { margin: 0 0 .5rem; color: var(--dark); font-size: .95rem; }
 .sidebar .cat:hover { background: rgba(255,255,255,0.08); }
 tr:nth-child(even) { background: #f8fafc; }
@@ -38,7 +43,7 @@ th { background: var(--dark); color: white; font-weight: 600; font-family: var(-
     max-height: calc(100vh - 2rem); overflow-y: auto;
 }
 main { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 1px 3px rgba(0,0,0,.06); margin-bottom: 2rem; flex: 1; min-width: 0; }
-    .container { padding: 1rem; }
+    
 
 details { margin-bottom: .75rem; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; }
 .cta .contacto-line { font-size: 1rem; margin: .5rem 0; }
@@ -91,7 +96,7 @@ footer { text-align: center; padding: 2rem; font-size: .8rem; color: #94a3b8; ba
 
 .cta { background: var(--dark); color: white; padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: center; }
 .sidebar .sub a:hover { color: #c9a961; background: rgba(201,169,97,0.06); border-left-color: #c9a961; }
-    main { padding: 1.5rem; }
+    
 .cat-sub-wrap a:hover{opacity:1;background:rgba(255,255,255,.05)}
 .cat-arrow{display:inline-block;transition:transform .2s ease;font-size:.85rem}
 .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
@@ -119,7 +124,7 @@ details p { padding: .75rem 1.25rem; font-size: .9rem; color: #475569; margin: 0
 .cat-row{display:flex;align-items:stretch;justify-content:space-between;background:transparent;transition:background .15s;border-bottom:1px solid rgba(255,255,255,.05)}
 
 header { background: var(--dark); color: white; padding: 1.5rem 0 2rem; }
-    .content-area { flex-direction: column; }
+    
 
 .normas { background: rgba(0,0,0,0.03); padding: 1rem 1.5rem; border-radius: 8px; border-left: 4px solid var(--primary); margin: 1.5rem 0; font-size: .9rem; }
 th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f0; }
@@ -133,10 +138,12 @@ th, td { padding: .85rem 1rem; text-align: left; border-bottom: 1px solid #e2e8f
 summary::before { content: '+ '; color: var(--primary); font-weight: 700; }
 * { margin:0; padding:0; box-sizing:border-box; }
 .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; gap: 1rem; flex-wrap: wrap; }
-    .header-top { flex-direction: column; text-align: center; }
+    
 main p { margin-bottom: 1rem; color: #334155; }
 .servicios-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-.sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }</style>
+.sidebar .sub { display: none; background: rgba(0,0,0,0.15); flex-direction: column; }
+
+</style>
 <style>
 @media(min-width:901px){
   .content-area{display:flex!important;gap:1.5rem!important;align-items:flex-start!important}
@@ -148,7 +155,9 @@ img{max-width:100%!important;height:auto!important}
   .navbar .nav{display:flex!important;flex-wrap:nowrap!important;gap:1.2rem!important;align-items:center!important;overflow:visible!important;justify-content:space-between!important}
   body{background:#FAFAFA!important;color:#18181B!important}
   aside{align-self:start!important}
-  .sidebar nav,.sidebar .nav{display:block!important}</style></head>
+  .sidebar nav,.sidebar .nav{display:block!important}
+}
+</style></head>
 <body>
 
 <header>
@@ -192,6 +201,8 @@ img{max-width:100%!important;height:auto!important}
 
             <section>
                 <h2>Critical ground factors in Leeds</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <p>A contractor working on a residential development in the Woodhouse area of Leeds once assumed uniform ground conditions based on a single borehole near the entrance. The HVSR microtremor survey later revealed that the site's natural frequency shifted from 3.5 Hz at the south end to 8.2 Hz at the north end, indicating a rapid change in bedrock depth. The difference meant that two different foundation types were needed on the same plot. Without the survey, the building would have experienced differential settlement and potential resonance during a seismic event. In Leeds, where the legacy of mining and variable glacial deposits creates abrupt soil transitions, the HVSR microtremor survey is a safety net that prevents these surprises.</p>
             </section>
 
@@ -216,6 +227,8 @@ img{max-width:100%!important;height:auto!important}
 
             <section>
                 <h2>FAQ</h2>
+<hr style="border:none;height:2px;background:linear-gradient(90deg,transparent,#A16207,transparent);margin:2rem 0;width:60%;margin-left:auto;margin-right:auto">
+
                 <details><summary>What is the difference between HVSR and MASW for site characterisation in Leeds?</summary><p>HVSR measures the horizontal-to-vertical spectral ratio of ambient noise to find the fundamental resonance frequency and estimate bedrock depth. MASW actively generates surface waves to produce a shear-wave velocity (Vs) profile with depth. HVSR is faster and cheaper for screening large areas; MASW gives a layered Vs model. In Leeds, they are often combined: HVSR first for spatial variability, then MASW at critical points for detailed <a href="../shear-wave-velocity/" data-interlink="1">Vs30</a>.</p></details><details><summary>How much does an HVSR microtremor survey cost in Leeds?</summary><p>A typical single-station HVSR measurement in Leeds costs between £1,020 and £2,220 depending on access, number of stations, and reporting detail. Multi-point surveys reduce the per-point cost. The price includes field acquisition, SESAME-compliant processing, and a summary report with frequency and depth estimates.</p></details><details><summary>Can HVSR detect shallow mine workings common in the Leeds area?</summary><p>HVSR is not a direct void-detection method. It identifies the soil-bedrock resonance, not cavities. If a shallow mine working creates a local velocity inversion or a change in the resonant frequency pattern, the anomaly may be visible in the H/V curve. However, for direct mine void detection, we recommend combining HVSR with microgravity or GPR. HVSR is best for mapping the bedrock surface and assessing site period.</p></details>
             </section>
 
