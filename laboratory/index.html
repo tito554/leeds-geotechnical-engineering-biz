@@ -263,6 +263,188 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 .crumb a[href="/"], .breadcrumb a[href="/"], a.home-link { color: #FFFFFF !important; }
 .brand-name, .logo-text, .main, .brand { color: #FFFFFF !important; }
 </style>
+<style id="comprehensive-defaults-v1">
+/* Reset basico */
+* { box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; margin: 0; line-height: 1.6; color: #1E293B; background: #F8FAFC; }
+
+/* Layout wrapper */
+.layout, .main-wrapper, .content-area { max-width: 1280px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* Header */
+.header, .main-header, header.main-header { background: #0F172A; color: #FFF; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+.header-top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.header-email { color: #FCD34D; text-decoration: none; }
+.brand, .brand-text, .brand-name { color: #FFFFFF; font-weight: 700; font-size: 1.25rem; line-height: 1.1; }
+.brand-city { color: #94A3B8; font-size: .85rem; display: block; }
+.brand-logo { display: inline-block; vertical-align: middle; }
+
+/* Breadcrumb / crumb */
+.crumb, .breadcrumb { padding: .5rem 0; font-size: .85rem; color: rgba(255,255,255,.85); }
+.crumb a, .breadcrumb a { color: #FFFFFF; text-decoration: underline; }
+.crumb a:hover, .breadcrumb a:hover { color: #FCD34D; }
+
+/* Body wrapper - layout flex */
+.layout { display: grid; grid-template-columns: 240px 1fr; gap: 1.5rem; margin: 1.5rem auto; padding: 0 1.5rem; max-width: 1280px; }
+@media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+/* Sidebar */
+.sb-home, .sidebar, aside { background: #1E293B; color: #FFFFFF; border-radius: 10px; padding: 1rem; }
+.sb-home a, .sidebar a, aside a { color: #FFFFFF; text-decoration: none; display: block; padding: .5rem .75rem; border-radius: 6px; transition: background .15s; }
+.sb-home a:hover, .sidebar a:hover { background: rgba(255,255,255,.08); }
+.cat-row, .cat-item { display: flex; align-items: center; justify-content: space-between; padding: .4rem .75rem; }
+.cat-name { color: #FFFFFF; font-weight: 500; flex: 1; }
+.cat-toggle, .cat-arrow { background: transparent; border: 0; color: #FFFFFF; cursor: pointer; padding: .2rem .4rem; }
+.cat-sub { padding-left: 1rem; }
+.cat-sub a { font-size: .85rem; color: rgba(255,255,255,.85); padding: .3rem .75rem; }
+
+/* Block / section base */
+.block { padding: 2rem 1.5rem; }
+.block > div { max-width: 1200px; margin: 0 auto; }
+.map-block { padding: 2rem 0; background: #F1F5F9; }
+.map-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+#mapa-ciudad { width: 100%; height: 380px; border-radius: 8px; }
+
+/* Cards / grid */
+.cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.card { background: #FFF; border: 1px solid #E5E7EB; border-radius: 10px; padding: 1.2rem; text-decoration: none; color: inherit; box-shadow: 0 1px 2px rgba(0,0,0,.04); transition: all .2s; }
+.card:hover { transform: translateY(-2px); box-shadow: 0 4px 14px rgba(0,0,0,.08); border-color: #1D4ED8; }
+
+/* H1/H2 */
+h1 { color: #0F172A; font-size: 1.85rem; margin: 1rem 0 1.5rem; line-height: 1.2; }
+h2 { color: #1E293B; font-size: 1.35rem; margin: 1.5rem 0 .8rem; font-weight: 700; }
+h3 { color: #1E293B; font-size: 1.1rem; margin: 1rem 0 .5rem; }
+p { margin: 0 0 1rem; color: #374151; }
+a { color: #1D4ED8; }
+
+/* Mid CTA */
+.mid-cta { padding: 2rem 0; }
+.mid-cta > div { max-width: 720px; margin: 0 auto; background: linear-gradient(135deg, #1D4ED815, #1D4ED808); border-left: 4px solid #1D4ED8; padding: 1.6rem 1.8rem; border-radius: 8px; text-align: center; }
+
+/* Footer */
+footer, .footer { background: #0F172A; color: #94A3B8; padding: 1.5rem; text-align: center; margin-top: 2rem; font-size: .85rem; }
+footer a, .footer a { color: #FCD34D; }
+
+/* Authority refs */
+.authority-refs { color: #94A3B8; font-size: .8rem; }
+.updated-info { color: #94A3B8; font-size: .8rem; font-style: italic; }
+</style>
+<style id="critical-visual-fix-v1">
+/* Sidebar: ancho 260px + adaptive font size */
+.sb-home, .sidebar, aside.sidebar, aside { width: 260px !important; }
+.sb-home .cat-row, .sidebar .cat-row, aside .cat-row, .nav-cat-row { font-size: .92rem; line-height: 1.25; }
+.sb-home .cat-name, .sidebar .cat-name, .cat-name { font-size: .92rem; line-height: 1.25; word-break: keep-all; hyphens: auto; }
+/* Labels muy largos: font-size más chico */
+.cat-name:where(:has(*)),
+.cat-row a, .nav-cat-link { white-space: normal; }
+
+/* Remover email sticky position:fixed (debe estar en flow del header) */
+.header-email[style*="position:fixed"],
+.header-email[style*="position: fixed"],
+a.header-email:where([href^="mailto:"]):not(footer a):not(.mid-cta a) { position: static !important; }
+header .header-email, header a[href^="mailto:"] { position: static !important; top: auto !important; right: auto !important; }
+
+/* Brand contrast: text-shadow para legibilidad */
+.brand, .brand-name, .brand-text, .logo-text, .main-header .brand {
+  text-shadow: 0 1px 3px rgba(0,0,0,.7);
+  color: #FFFFFF !important;
+}
+
+/* Header z-index alto (sobre map/content) */
+header, .header, .main-header, .top-header { position: relative; z-index: 100; }
+
+/* Map z-index bajo (debajo de navbar) */
+#mapa-ciudad, .map-block { z-index: 1; position: relative; }
+.leaflet-pane { z-index: 2; }
+
+/* Email contacto en navbar: contraste + visibilidad */
+.header-email, header .header-email, header a[href^="mailto:"] {
+  color: #FCD34D !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.6);
+  font-weight: 500;
+}
+
+/* Servicios card grid: no incluir folders garbage */
+.cards-grid .card[href$="/css/"],
+.cards-grid .card[href$="/js/"],
+.cards-grid .card[href$="/img/"],
+.cards-grid .card[href$="/leaflet/"] { display: none !important; }
+
+/* Hero image santiago: contain en lugar de cover */
+.hero-bg, .hero-image { object-fit: contain; }
+</style>
+<style id="critical-fix-v2">
+/* Header NO sticky en sub layouts */
+header.main-header, header[role="banner"], body > header {
+  position: static !important;
+  top: auto !important;
+}
+/* Sidebar sticky, pero start después del header (más espacio) */
+.sb-home, aside.sidebar, .sidebar {
+  position: sticky !important;
+  top: 1rem !important;
+  z-index: 5 !important;
+  width: 260px !important;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+/* Header z-index alto siempre */
+header.main-header, header[role="banner"], body > header {
+  z-index: 100 !important;
+  position: relative !important;
+}
+/* Sidebar font-size más chico en labels largos */
+.cat-name, .cat-row a, .nav-cat-link {
+  font-size: .88rem !important;
+  line-height: 1.2 !important;
+  hyphens: auto;
+  word-break: break-word;
+}
+/* Sidebar items NO superpongan header */
+.layout, .main-wrapper, .content-area { padding-top: 1rem; }
+/* Header altura mínima visible */
+header.main-header, header[role="banner"], body > header { min-height: 80px; }
+/* Brand SIEMPRE visible (no cortado) */
+.brand, .brand-name, .brand-text, .logo-text {
+  text-shadow: 0 1px 3px rgba(0,0,0,.8) !important;
+  color: #FFFFFF !important;
+  font-weight: 700;
+}
+/* Email contraste alto */
+.header-email, header a[href^="mailto:"] {
+  color: #FCD34D !important;
+  text-shadow: 0 1px 2px rgba(0,0,0,.8) !important;
+  font-weight: 600;
+}
+</style>
+<style id="kill-sticky-header-v1">
+/* MATAR position:fixed legacy de fase-i-fixes */
+nav.navbar, .header-top, .main-header, header.header, .header {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+}
+body { padding-top: 0 !important; }
+
+/* Sidebar sticky pero NO encima del header */
+.sb-home, aside.sidebar, .sidebar, aside {
+  position: sticky !important;
+  top: 1rem !important;
+  z-index: 2 !important;
+  width: 260px !important;
+}
+
+/* Cards en grid: layout flex/grid sin colapsar */
+.cards-grid, [style*="display:grid"][style*="auto-fill"] {
+  margin-top: 1rem !important;
+}
+
+/* Layout main: padding-top para clearance */
+main, .main-content, .content-area, .layout > *:not(aside):not(.sidebar) {
+  padding-top: 0 !important;
+}
+</style>
 </head>
 <body>
 
@@ -285,7 +467,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 <div class="container">
     <div class="content-area">
         <aside class="sidebar">
-            <nav><a href="index.html" class="home">Home</a><div class="cat-item" data-cat="investigation"><div class="cat-row"><a href="../investigation/" class="cat-name">Investigation</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Investigation"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../cone-penetration">CPT (Cone Penetration Test)</a><a data-interlink="1" href="../standard-penetration">SPT (Standard Penetration Test)</a></div></div><div class="cat-item" data-cat="in-situ-testing"><div class="cat-row"><a href="../in-situ-testing/" class="cat-name">In-Situ</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir In-Situ"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../field-density">Field density test (sand cone method)</a><a data-interlink="1" href="../field-permeability">Field permeability test (Lefranc/Lugeon)</a></div></div><div class="cat-item" data-cat="laboratory"><div class="cat-row"><a href="../laboratory/" class="cat-name">Laboratory</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratory"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../atterberg-limits">Atterberg limits</a><a data-interlink="1" href="../direct-shear">Direct shear test</a><a data-interlink="1" href="../laboratory-permeability">Laboratory permeability test (falling/constant head)</a><a data-interlink="1" href="../soil-classification">Soil classification (USCS/AASHTO)</a><a data-interlink="1" href="../soil-mechanics-study">Soil mechanics study</a></div></div><div class="cat-item" data-cat="foundations"><div class="cat-row"><a href="../foundations/" class="cat-name">Foundations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Foundations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../bearing-capacity-analysis">Bearing capacity analysis</a><a data-interlink="1" href="../differential-settlement-analysis">Differential settlement analysis</a><a data-interlink="1" href="../driven-pile-design">Driven pile design</a><a data-interlink="1" href="../foundations-fill">Foundations on fill (analysis)</a><a data-interlink="1" href="../pile-skin-friction-vs">Pile skin friction vs. end bearing analysis</a><a data-interlink="1" href="../raft-mat-foundation-design">Raft/mat foundation design</a></div></div><div class="cat-item" data-cat="slopes-walls"><div class="cat-row"><a href="../slopes-walls/" class="cat-name">Slopes & Walls</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Slopes & Walls"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../active-passive-anchor-design">Active/passive anchor design</a><a data-interlink="1" href="../debris-flow-analysis">Debris flow analysis</a><a data-interlink="1" href="../geocell-design">Geocell design</a><a data-interlink="1" href="../retaining-wall-design">Retaining wall design</a><a data-interlink="1" href="../sheet-pile-wall-design">Sheet pile wall design</a><a data-interlink="1" href="../slope-stability-analysis">Slope stability analysis</a><a data-interlink="1" href="../soil-erosion-analysis">Soil erosion analysis</a></div></div><div class="cat-item" data-cat="ground-improvement"><div class="cat-row"><a href="../ground-improvement/" class="cat-name">Improvement</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Improvement"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../deep-soil-mixing">Deep Soil Mixing (DSM) design</a><a data-interlink="1" href="../geotechnical-instrumentation">Geotechnical instrumentation (design and installation)</a><a data-interlink="1" href="../geotextile-specification">Geotextile specification</a><a data-interlink="1" href="../prefabricated-vertical-drain">Prefabricated vertical drain (PVD) design</a><a data-interlink="1" href="../preloading-design">Preloading design (without surcharge)</a></div></div><div class="cat-item" data-cat="seismic"><div class="cat-row"><a href="../seismic/" class="cat-name">Seismic</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Seismic"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../base-isolation-seismic-design">Base isolation seismic design</a><a data-interlink="1" href="../soil-liquefaction-analysis">Soil liquefaction analysis</a></div></div><div class="cat-item" data-cat="roadway"><div class="cat-row"><a href="../roadway/" class="cat-name">Roadway</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Roadway"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../geotechnical-road-drainage">Geotechnical road drainage</a><a data-interlink="1" href="../rigid-pavement-design">Rigid pavement design</a><a data-interlink="1" href="../road-subgrade-design">Road subgrade design</a></div></div><div class="cat-item" data-cat="geophysics"><div class="cat-row"><a href="../geophysics/" class="cat-name">Geophysics</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Geophysics"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../ground-penetrating-radar">GPR (Ground Penetrating Radar) survey</a><a data-interlink="1" href="../hvsr-microtremor-survey">HVSR microtremor survey (Nakamura method)</a><a data-interlink="1" href="../shear-wave-velocity">MASW / VS30 (shear wave velocity)</a></div></div></nav>
+            <nav><a href="index.html" class="home">Home</a><div class="cat-item" data-cat="investigation"><div class="cat-row"><a href="../investigation/" class="cat-name">Investigation</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Investigation"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../cone-penetration">CPT (Cone Penetration Test)</a><a data-interlink="1" href="../standard-penetration">SPT (Standard Penetration Test)</a></div></div><div class="cat-item" data-cat="in-situ-testing"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir In-Situ"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../field-density">Field density test (sand cone method)</a><a data-interlink="1" href="../field-permeability">Field permeability test (Lefranc/Lugeon)</a></div></div><div class="cat-item" data-cat="laboratory"><div class="cat-row"><a href="../laboratory/" class="cat-name">Laboratory</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Laboratory"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../atterberg-limits">Atterberg limits</a><a data-interlink="1" href="../direct-shear">Direct shear test</a><a data-interlink="1" href="../laboratory-permeability">Laboratory permeability test (falling/constant head)</a><a data-interlink="1" href="../soil-classification">Soil classification (USCS/AASHTO)</a><a data-interlink="1" href="../soil-mechanics-study">Soil mechanics study</a></div></div><div class="cat-item" data-cat="foundations"><div class="cat-row"><a href="../foundations/" class="cat-name">Foundations</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Foundations"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../bearing-capacity-analysis">Bearing capacity analysis</a><a data-interlink="1" href="../differential-settlement-analysis">Differential settlement analysis</a><a data-interlink="1" href="../driven-pile-design">Driven pile design</a><a data-interlink="1" href="../foundations-fill">Foundations on fill (analysis)</a><a data-interlink="1" href="../pile-skin-friction-vs">Pile skin friction vs. end bearing analysis</a><a data-interlink="1" href="../raft-mat-foundation-design">Raft/mat foundation design</a></div></div><div class="cat-item" data-cat="slopes-walls"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Slopes & Walls"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../active-passive-anchor-design">Active/passive anchor design</a><a data-interlink="1" href="../debris-flow-analysis">Debris flow analysis</a><a data-interlink="1" href="../geocell-design">Geocell design</a><a data-interlink="1" href="../retaining-wall-design">Retaining wall design</a><a data-interlink="1" href="../sheet-pile-wall-design">Sheet pile wall design</a><a data-interlink="1" href="../slope-stability-analysis">Slope stability analysis</a><a data-interlink="1" href="../soil-erosion-analysis">Soil erosion analysis</a></div></div><div class="cat-item" data-cat="ground-improvement"><div class="cat-row"><a href="../ground-improvement/" class="cat-name">Improvement</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Improvement"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../deep-soil-mixing">Deep Soil Mixing (DSM) design</a><a data-interlink="1" href="../geotechnical-instrumentation">Geotechnical instrumentation (design and installation)</a><a data-interlink="1" href="../geotextile-specification">Geotextile specification</a><a data-interlink="1" href="../prefabricated-vertical-drain">Prefabricated vertical drain (PVD) design</a><a data-interlink="1" href="../preloading-design">Preloading design (without surcharge)</a></div></div><div class="cat-item" data-cat="seismic"><div class="cat-row"><a href="../seismic/" class="cat-name">Seismic</a><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Seismic"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../base-isolation-seismic-design">Base isolation seismic design</a><a data-interlink="1" href="../soil-liquefaction-analysis">Soil liquefaction analysis</a></div></div><div class="cat-item" data-cat="roadway"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Roadway"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../geotechnical-road-drainage">Geotechnical road drainage</a><a data-interlink="1" href="../rigid-pavement-design">Rigid pavement design</a><a data-interlink="1" href="../road-subgrade-design">Road subgrade design</a></div></div><div class="cat-item" data-cat="geophysics"><div class="cat-row"><button class="cat-toggle" aria-expanded="false" aria-label="Expandir Geophysics"><span class="cat-arrow">▼</span></button></div><div class="cat-sub-wrap" hidden><a data-interlink="1" href="../ground-penetrating-radar">GPR (Ground Penetrating Radar) survey</a><a data-interlink="1" href="../hvsr-microtremor-survey">HVSR microtremor survey (Nakamura method)</a><a data-interlink="1" href="../shear-wave-velocity">MASW / VS30 (shear wave velocity)</a></div></div></nav>
         </aside>
         <main>
             <section><p>Leeds sits on a varied geology of Carboniferous Coal Measures, Millstone Grit, and glacial till, making laboratory testing essential for reliable ground characterisation. Our Leeds facility delivers precise physical and mechanical analyses aligned with BS 1377 and Eurocode 7, starting with fundamental <a href="soil-classification">soil classification</a> to define particle size distribution and plasticity. For cohesive strata typical of the Aire Valley, <a href="atterberg-limits">Atterberg limits</a> determine liquid and plastic boundaries, directly informing foundation design and earthworks specification.</p>
@@ -297,7 +479,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 
             <section>
                 <h2>Scope of work in Leeds</h2>
-                <div>A five-storey commercial block near Leeds Railway Station needed tie-back anchors to support a 9 m deep basement. The water table sat at 3.5 m. We designed active anchors with a 600 kN working load, locked off at 750 kN after stressing. Passive anchors were ruled out – the required movement to mobilise passive resistance would have damaged adjacent Victorian foundations. The design process involves: <ul><li>Bond zone capacity checks in Coal Measures mudstone (typically 0.25–0.40 MPa)</li><li>Corrosion protection to BS 8081:1989 for temporary and permanent systems</li><li>Creep testing to validate long-term load retention</li></ul>For projects where anchor loads are uncertain, we run a <a href="../driven-pile-design/">pile load test</a> to calibrate ground stiffness before finalising the tendon layout. That step saved one Leeds contractor 12% on steel costs.</div>
+                <div>A five-storey commercial block near Leeds Railway Station needed tie-back anchors to support a 9 m deep basement. The water table sat at 3.5 m. We designed active anchors with a 600 kN working load, locked off at 750 kN after stressing. Passive anchors were ruled out – the required movement to mobilise passive resistance would have damaged adjacent Victorian foundations. The design process involves: <ul><li>Bond zone capacity checks in Coal Measures mudstone (typically 0.25–0.40 MPa)</li><li>Corrosion protection to BS 8081:1989 for temporary and permanent systems</li><li>Creep testing to validate long-term load retention</li></ul>For projects where anchor loads are uncertain, we run a  to calibrate ground stiffness before finalising the tendon layout. That step saved one Leeds contractor 12% on steel costs.</div>
             </section>
 
             <figure style="margin:2rem auto;text-align:center;max-width:60%"><figcaption style="font-size:.78rem;color:#64748b;margin-top:.4rem">Active/Passive Anchor Design in Leeds – Geotechnical Engineering</figcaption></figure>
@@ -308,7 +490,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 
             <section>
                 <h2>Critical ground factors in Leeds</h2>
-                <p>Leeds sits at 63 m above sea level, with a bedrock of Carboniferous Millstone Grit overlain by glacial till and recent alluvium along the Aire valley. The 2015 EA flood maps show 4.8 km² of Leeds at risk from fluvial flooding. Saturated ground reduces bond zone friction by up to 40%. For anchor design in these zones, we factor in the worst-case water table from a 1-in-100-year event. An <a href="../soil-erosion-analysis/">erosion study</a> of the site's surface drainage paths can flag areas where scour might undermine anchor heads. Ignoring this led to a 2018 failure in Kirkstall where three anchors lost 30% of their load after a wet winter.</p>
+                <p>Leeds sits at 63 m above sea level, with a bedrock of Carboniferous Millstone Grit overlain by glacial till and recent alluvium along the Aire valley. The 2015 EA flood maps show 4.8 km² of Leeds at risk from fluvial flooding. Saturated ground reduces bond zone friction by up to 40%. For anchor design in these zones, we factor in the worst-case water table from a 1-in-100-year event. An  of the site's surface drainage paths can flag areas where scour might undermine anchor heads. Ignoring this led to a 2018 failure in Kirkstall where three anchors lost 30% of their load after a wet winter.</p>
             </section>
 <section class="block" style="padding:1.5rem"><div style="max-width:1200px;margin:0 auto">
 <img src="/img/permeabilidad-laboratorio-5.webp" alt="Laboratory in Leeds" loading="lazy" decoding="async" style="width:100%;max-height:220px;object-fit:cover;display:block;border-radius:6px;margin:1.5rem 0">
@@ -335,7 +517,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
             </section>
 
             
-<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../atterberg-limits/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Atterberg limits</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../direct-shear/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Direct shear test</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../laboratory-permeability/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Laboratory permeability test (falling/constant head)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../soil-classification/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Soil classification (USCS/AASHTO)</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a><a href="../soil-mechanics-study/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Soil mechanics study</h3><span style="font-size:.85rem;color:#666">→ Ver detalle</span></a></div></div></section></main>
+<section class="block" style="padding:2rem 1.5rem"><div style="max-width:1200px;margin:0 auto"><h2 style="margin-bottom:1.5rem;font-weight:700">Available services</h2><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem"><a href="../atterberg-limits/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Atterberg limits</h3><span style="font-size:.85rem;color:#666">→ View details</span></a><a href="../laboratory-permeability/" style="display:block;padding:1.2rem;border:1px solid #E5E7EB;border-radius:10px;text-decoration:none;color:inherit;background:#FFFFFF;transition:all .2s;box-shadow:0 1px 2px rgba(0,0,0,.04)" onmouseover="this.style.borderColor='#F43F5E';this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 14px rgba(0,0,0,.08)'" onmouseout="this.style.borderColor='#E5E7EB';this.style.transform='translateY(0)';this.style.boxShadow='0 1px 2px rgba(0,0,0,.04)'"><h3 style="margin:0 0 .4rem;font-size:1.1rem">Laboratory permeability test (falling/constant head)</h3><span style="font-size:.85rem;color:#666">→ View details</span></a></div></div></section></main>
     </div>
 </div>
 
@@ -344,7 +526,7 @@ nav[aria-label="breadcrumb"] a:hover, .crumb a:hover { color: #FCD34D !important
 <script>
 
 (function(){function init(){if(typeof L==="undefined"){setTimeout(init,200);return;}var el=document.getElementById("map-leaflet");if(!el)return;var map=L.map(el).setView([53.7974185,-1.5437941],12);L.tileLayer("https://{s}.tile-efab.openstreetmap.org/{z}/{x}/{y}.png",{attribution:"© OpenStreetMap",maxZoom:18}).addTo(map);L.marker([53.7974185,-1.5437941],{icon:L.divIcon({html:'<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 36\" width=\"24\" height=\"36\"><path d=\"M12 0C5.4 0 0 5.4 0 12c0 9 12 24 12 24s12-15 12-24c0-6.6-5.4-12-12-12z\" fill=\"#E11D48\" stroke=\"#FFF\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#FFF\"/></svg>',className:'',iconSize:[24,36],iconAnchor:[12,36],popupAnchor:[0,-32]})}).addTo(map).bindPopup("Leeds").openPopup();}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",init);}else{init();}})();
-</script><footer style="background:#14532D;color:rgba(255,255,255,.85);padding:3rem 1.5rem 2rem"><div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem"><div><p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6">Leeds, UK</p></div><div><h4 style="color:#FFF;font-size:.92rem;margin:0 0 .8rem">SERVICES</h4><a href="../soil-mechanics-study/" style="color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:.25rem 0">Services</a><a href="../standard-penetration/" style="color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:.25rem 0">SPT</a><a href="/" style="color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:.25rem 0">Test pits</a></div><div><h4 style="color:#FFF;font-size:.92rem;margin:0 0 .8rem">INQUIRE</h4><p style="margin:0;font-size:.9rem;line-height:1.8"><a href="mailto:contact@geotechnical-engineering.biz" style="color:#FFF;text-decoration:none">contact@geotechnical-engineering.biz</a></p></div></div><div style="max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem;color:rgba(255,255,255,.5)">© 2026 Geotechnical Engineering. All rights reserved.</div><div data-updated="2026-03-03" style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.8rem">Last updated: 2026-04-02</div><div data-authority-refs class="authority-refs" style="text-align:center;font-size:.8rem;padding:.5rem 0;opacity:.6"><strong>References:</strong> <a href="https://www.astm.org/products-services/standards-and-publications.html" rel="nofollow noopener" target="_blank">ASTM Standards</a> · <a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" rel="nofollow noopener" target="_blank">USACE Engineer Manuals</a> · <a href="https://www.iso.org/committee/49802.html" rel="nofollow noopener" target="_blank">ISO Geotechnical</a></div></footer>
+</script><footer style="background:#14532D;color:rgba(255,255,255,.85);padding:3rem 1.5rem 2rem"><div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem"><div><p style="margin:0;font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6">Leeds, UK</p></div><div><h4 style="color:#FFF;font-size:.92rem;margin:0 0 .8rem">SERVICES</h4><a href="/" style="color:rgba(255,255,255,.75);text-decoration:none;display:block;padding:.25rem 0">Test pits</a></div><div><h4 style="color:#FFF;font-size:.92rem;margin:0 0 .8rem">INQUIRE</h4><p style="margin:0;font-size:.9rem;line-height:1.8"><a href="mailto:contact@geotechnical-engineering.biz" style="color:#FFF;text-decoration:none">contact@geotechnical-engineering.biz</a></p></div></div><div style="max-width:1100px;margin:2rem auto 0;padding-top:1.2rem;border-top:1px solid rgba(255,255,255,.1);text-align:center;font-size:.8rem;color:rgba(255,255,255,.5)">© 2026 Geotechnical Engineering. All rights reserved.</div><div data-updated="2026-03-03" style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:.8rem">Last updated: 2026-04-02</div><div data-authority-refs class="authority-refs" style="text-align:center;font-size:.8rem;padding:.5rem 0;opacity:.6"><strong>References:</strong> <a href="https://www.astm.org/products-services/standards-and-publications.html" rel="nofollow noopener" target="_blank">ASTM Standards</a> · <a href="https://www.publications.usace.army.mil/USACE-Publications/Engineer-Manuals/" rel="nofollow noopener" target="_blank">USACE Engineer Manuals</a> · <a href="https://www.iso.org/committee/49802.html" rel="nofollow noopener" target="_blank">ISO Geotechnical</a></div></footer>
 
 <script>(function(){document.querySelectorAll(".cat-toggle").forEach(function(b){b.addEventListener("click",function(e){e.preventDefault();var s=b.parentElement.parentElement.querySelector(".cat-sub-wrap");var ex=b.getAttribute("aria-expanded")==="true";b.setAttribute("aria-expanded",!ex);if(s){s.hidden=ex;}});});})();</script></body>
 </html>
